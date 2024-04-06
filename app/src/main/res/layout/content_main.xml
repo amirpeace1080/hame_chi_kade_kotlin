@@ -7,24 +7,84 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main">
 
-    <fragment
-        android:id="@+id/nav_host_fragment_content_main"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/mobile_navigation" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="364dp"
-        android:layout_height="430dp"
-        android:text="hi"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/nav_host_fragment_content_main"
-        app:layout_constraintStart_toStartOf="@+id/nav_host_fragment_content_main"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/image_search"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/image_date"
+                app:layout_constraintEnd_toEndOf="@+id/image_proxy"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/image_proxy"
+                app:layout_constraintTop_toTopOf="@+id/image_date"
+                app:srcCompat="@drawable/picture_search" />
+
+            <ImageButton
+                android:id="@+id/image_bio"
+                android:layout_width="180dp"
+                android:layout_height="164dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/biography" />
+
+            <ImageButton
+                android:id="@+id/image_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/image_bio"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/image_bio"
+                app:layout_constraintTop_toBottomOf="@+id/image_bio"
+                app:srcCompat="@drawable/date" />
+
+            <ImageButton
+                android:id="@+id/image_proxy"
+                android:layout_width="180dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/image_bio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/image_bio"
+                app:srcCompat="@drawable/telegram" />
+
+            <ImageButton
+                android:id="@+id/image_translate"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/image_music"
+                app:layout_constraintEnd_toEndOf="@+id/image_search"
+                app:layout_constraintStart_toStartOf="@+id/image_search"
+                app:layout_constraintTop_toTopOf="@+id/image_music"
+                app:srcCompat="@drawable/translate" />
+
+            <ImageButton
+                android:id="@+id/image_music"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/image_date"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/image_date"
+                app:layout_constraintTop_toBottomOf="@+id/image_date"
+                app:srcCompat="@drawable/music_serach" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
