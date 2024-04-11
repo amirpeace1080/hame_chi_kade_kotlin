@@ -27,7 +27,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, biography::class.java))
         }
 
-            setSupportActionBar(binding.appBarMain.toolbar)
+        // imagebutton proxy
+        val imageButton_proxy:ImageButton=findViewById(R.id.image_proxy)
+        imageButton_proxy.setOnClickListener {
+            startActivity(Intent(this, proxy::class.java))
+        }
+
+        // imagebutton date
+        val imageButton_date:ImageButton=findViewById(R.id.image_date)
+        imageButton_date.setOnClickListener {
+            startActivity(Intent(this, date::class.java))
+        }
+
+        setSupportActionBar(binding.appBarMain.toolbar)
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         appBarConfiguration = AppBarConfiguration(
